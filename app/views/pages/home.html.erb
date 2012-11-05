@@ -1,0 +1,19 @@
+<!--
+
+<h1>Ardhiview</h1>
+<h4>Welcome to Ardhiview. C://The world</h4> 
+<p>You are seeing this page because you are signed in! </p> 
+
+-->
+
+
+<% if user_signed_in? %>
+<div id="map" onload="initialize();">
+</div>
+
+<% else %>
+  <%= link_to "sign in", new_user_session_path %>
+<div id='main-image'>
+<img src='assets/ardi_logo.jpeg' width="550" height="350" /></div>
+<h1 id='home-heading'><%= link_to "Sign up", new_user_registration_path %></h1> 
+<% end %>
